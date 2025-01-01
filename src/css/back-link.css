@@ -3,7 +3,7 @@
   display: inline-block;
   padding: 4px 8px;
   margin-top: 32px;
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 8px;
 }
 .back-link::before {
@@ -11,8 +11,8 @@
   position: absolute;
   top: 50%;
   left: 0;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 
   background-repeat: no-repeat;
   background-position: center;

@@ -22,10 +22,22 @@
 }
 .main-title {
   text-align: center;
+  font-weight: 500;
+  margin-bottom: 50px;
 }
-.main-title-gradient {
+.main {
+  color: #095e69;
+  text-align: center;
+  font-size: 500px;
+  font-weight: 600;
   display: block;
   font-size: 2em;
+  background-image: linear-gradient(120deg, #be34fe44 30%, #41d0ff41);
+}
+
+.main-title-gradient {
+  display: block;
+  font-size: 3em;
   background-image: linear-gradient(120deg, #bd34fe 30%, #41d1ff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

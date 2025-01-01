@@ -25,7 +25,7 @@
 }
 .nav-link:hover,
 .nav-link:focus {
-  color: #747bff;
+  color: #0400ff;
 }
 .nav-link::after {
   content: '';
