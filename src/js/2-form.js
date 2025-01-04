@@ -9,15 +9,17 @@ const fillFormFields = () => {
     const formDataFromLS = JSON.parse(
       localStorage.getItem('feedback-form-state')
     );
+
     if (formDataFromLS === null) {
       return;
     }
-    // formData = formDataFromLS;
-    console.log(formDataFromLS);
+    formData = formDataFromLS;
+    // console.log(formDataFromLS);
     // console.dir(feedbackFormEl);
-    // for (const key in formDataFromLS) {
-    //   feedbackFormEl.elements[key].value = formDataFromLS[key];
-    // }
+    for (const key in formDataFromLS) {
+      feedbackFormEl.elements[key].value = formDataFromLS[key];
+      // console.log(key);
+    }
   } catch (err) {
     //     console.log(err);
   }
@@ -38,14 +40,15 @@ const onFormFieldChange = event => {
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
 };
 
-// const onFeedbackFormSubmit = event => {
-//   event.preventDefault();
-//   const { currentTarget: formEl } = event;
-//   formEl.reset();
-//   localStorage.removeItem('feedback-form-state');
-// };
+const onFeedbackFormSubmit = event => {
+  event.preventDefault();
+  // console.log('object');
+  const { currentTarget: formEl } = event;
+  formEl.reset();
+  localStorage.removeItem('feedback-form-state');
+};
 feedbackFormEl.addEventListener('change', onFormFieldChange);
-// feedbackFormEl.addEventListener('submit', onFeedbackFormSubmit);
+feedbackFormEl.addEventListener('submit', onFeedbackFormSubmit);
 
 // -------------------
 // let formData = {
