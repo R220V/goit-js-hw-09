@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/1-gallery.js" type="module" defer></script>
+    <script src="./js/2-form.js" type="module" defer></script>
   </head>
   <body>
     <main>
@@ -14,10 +16,31 @@
         <h1 class="main-title">
           <span class="main-title-gradient">Welcome</span> to Form
         </h1>
+
+        <form class="feedback-form" autocomplete="off">
+          <label class="label">
+            Email
+            <input
+              type="email"
+              name="email"
+              autofocus
+              placeholder="example@gmail.com"
+            />
+          </label>
+
+          <label class="label form-label">
+            Message
+            <textarea
+              name="message"
+              rows="8"
+              placeholder="Enter your text"
+            ></textarea>
+          </label>
+          <button class="btn-submit" type="submit">Submit</button>
+        </form>
+
         <load src="./partials/back-link.html" />
       </div>
     </main>
-
-    <script type="module" src="./js/2-form.js"></script>
   </body>
 </html>
