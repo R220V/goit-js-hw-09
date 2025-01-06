@@ -82,14 +82,6 @@ const createGalleryArray = images.map(el => createGallery(el)).join('');
 
 imagesListEl.innerHTML = createGalleryArray;
 
-imagesListEl.onclick = function (event) {
-  event.preventDefault();
-
-  if (event.target === event.currentTarget) {
-    return;
-  }
-};
-
 import SimpleLightbox from 'simplelightbox';
 
 new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
