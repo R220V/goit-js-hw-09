@@ -77,23 +77,18 @@ const createGallery = image => {
         </li>`;
 };
 // console.log(createGallery);
-
-const createGalleryArray = images.map(el => createGallery(el)).join('');
-
-// // console.log(createGalleryArray);
-
 const imagesListEl = document.querySelector('.gallery');
-
-// console.log(imagesListEl);
+const createGalleryArray = images.map(el => createGallery(el)).join('');
 
 imagesListEl.innerHTML = createGalleryArray;
 
-imagesListEl.addEventListener('click', event => {
+imagesListEl.onclick = function (event) {
   event.preventDefault();
+
   if (event.target === event.currentTarget) {
     return;
   }
-});
+};
 
 import SimpleLightbox from 'simplelightbox';
 
